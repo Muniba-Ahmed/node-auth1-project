@@ -63,8 +63,7 @@ router.post(
   }
  */
 router.post("/login", checkUsernameExists, (req, res, next) => {
-  res.json("login");
-});
+ 
 /**
   3 [GET] /api/auth/logout
 
