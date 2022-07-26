@@ -7,6 +7,7 @@ const {
   checkUsernameExists,
   checkUsernameFree,
 } = require("./auth-middleware");
+const User = require("../users/users-model");
 /**
   1 [POST] /api/auth/register { "username": "sue", "password": "1234" }
 
@@ -34,7 +35,7 @@ router.post(
   checkPasswordLength,
   checkUsernameFree,
   (req, res, next) => {
-    res.json("register");
+    const { username, password } = req.body;
   }
 );
 /**
